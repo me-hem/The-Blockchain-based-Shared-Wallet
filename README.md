@@ -164,15 +164,17 @@ Create comprehensive tests for:
 ### Project Structure
 ```
 SmartWallet/
-├── contracts/
-│   ├── Allowance.sol
-│   └── SharedWallet.sol
-├── scripts/
-│   └── deploy.js
-├── test/
-│   └── SharedWallet.test.js
-├── hardhat.config.js
-└── README.md
+├── .deps/                     # Dependencies cache
+├── .states/                   # Compilation states
+├── artifacts/                 # Compiled contract artifacts
+│   └── build-info/           # Build information
+│       ├── Allowance.json    # Allowance contract ABI and bytecode
+│       ├── Allowance_metadata.json
+│       ├── SimpleWallet.json  # SimpleWallet contract ABI and bytecode
+│       └── SimpleWallet_metadata.json
+├── Allowance.sol             # Base allowance management contract
+├── SimpleWallet.sol          # Main shared wallet contract
+└── README.md                 # Project documentation
 ```
 
 
